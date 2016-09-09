@@ -1,0 +1,19 @@
+{
+    "name": "widerfunnel/optimizely-sdk",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Valentin Prugnaud",
+            "email": "valentin.prugnaud@widerfunnel.com"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^6.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Optimizely\\":"src"
+        }
+    }
+}
