@@ -5,6 +5,7 @@ namespace Optimizely;
 use GuzzleHttp\Client;
 use Optimizely\API\Project;
 use Optimizely\API\Experiment;
+use Optimizely\API\Schedule;
 
 /**
  * Class Optimizely
@@ -72,5 +73,16 @@ class Optimizely
         $response = $this->client->request('GET', "experiments/{$experimentId}");
 
         return new Experiment($this->client, $response);
+    }
+
+    /**
+     * @param $scheduleId
+     * @return string
+     */
+    public function schedule($scheduleId)
+    {
+        $response = $this->client->request('GET', "schedules/{$scheduleId}");
+
+        return new Schedule($this->client, $response);
     }
 }

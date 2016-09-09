@@ -57,7 +57,6 @@ class Experiment extends AbstractAPI
         $response = $this->client->request('PUT','experiments/' . $this->id, ['body' => json_encode($options)]);
 
         return $response->getBody()->getContents();
-
     }
 
     /**
@@ -80,6 +79,43 @@ class Experiment extends AbstractAPI
         $options = ['status' => 'Archived'];
 
         $response = $this->client->request('PUT','experiments/' . $this->id, ['body' => json_encode($options)]);
+
+        return $response->getBody()->getContents();
+    }
+
+    /**
+     * @return string
+     */
+    public function schedules()
+    {
+        $response = $this->client->get('experiments/' . $this->id . '/schedules');
+
+        return $response->getBody()->getContents();
+    }
+
+    /**
+     * @param $startTime, $stopTime
+     * @return string
+     */
+    public function schedule($startTime = null, $stopTime = null)
+    {
+        $options = [];
+
+        $options['start_time'] = $startTime;
+
+        $options['stop_time'] = $stopTime;
+
+        $response = $this->client->request('POST', 'experiments/' . $this->id . '/schedules', ['body' => json_encode($options)]);
+
+        return $response->getBody()->getContents();
+    }
+
+    /**
+     * @return string
+     */
+    public function variations()
+    {
+        $response = $this->client->get('experiments/' . $this->id . '/variations');
 
         return $response->getBody()->getContents();
     }
