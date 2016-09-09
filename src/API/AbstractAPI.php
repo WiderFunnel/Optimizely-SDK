@@ -41,4 +41,22 @@ abstract class AbstractAPI
     {
         return $this->client->request('GET', $endpoint);
     }
+
+    /**
+     * @param $endpoint, $options
+     * @return \Psr\Http\Message\ResponseInterface
+     */
+    public function post($endpoint, $options)
+    {
+        return $this->client->request('POST', $endpoint, ['body' => json_encode($options)]);
+    }
+
+    /**
+     * @param $endpoint, $options
+     * @return \Psr\Http\Message\ResponseInterface
+     */
+    public function put($endpoint, $options)
+    {
+        return $this->client->request('PUT', $endpoint, ['body' => json_encode($options)]);
+    }
 }

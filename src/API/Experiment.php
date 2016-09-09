@@ -1,0 +1,94 @@
+<?php
+
+namespace Optimizely\API;
+
+use GuzzleHttp\ClientInterface;
+use GuzzleHttp\Psr7\Response;
+
+/**
+ * Class Experiment
+ * @package Optimizely\API
+ */
+class Experiment extends AbstractAPI
+{
+
+    protected $id;
+
+    /**
+     * Experiment constructor.
+     * @param \GuzzleHttp\ClientInterface $client
+     * @param $content
+     */
+    public function __construct(ClientInterface $client, Response $content)
+    {
+        parent::__construct($client, $content);
+
+        $this->id = $this->getExperimentId();
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getExperimentId()
+    {
+        $response = json_decode($this->content->getBody()->getContents(), true);
+
+        return $response['id'];
+    }
+
+   /**
+     * @param $options
+     * @return string
+     */
+    public function update($options)
+    {
+        $response = $this->client->request('PUT','experiments/' . $this->id, ['body' => json_encode($options)]);
+
+        return $response->getBody()->getContents();
+    }
+
+    /**
+     * @return mixed
+     */
+    public function launch()
+    {
+        $options = ['status' => 'Running'];
+
+        $response = $this->client->request('PUT','experiments/' . $this->id, ['body' => json_encode($options)]);
+
+        return $response->getBody()->getContents();
+
+    }
+
+    /**
+     * @return mixed
+     */
+    public function pause()
+    {
+        $options = ['status' => 'Paused'];
+
+        $response = $this->client->request('PUT','experiments/' . $this->id, ['body' => json_encode($options)]);
+
+        return $response->getBody()->getContents();
+    }
+
+    /**
+     * @return mixed
+     */
+    public function archive()
+    {
+        $options = ['status' => 'Archived'];
+
+        $response = $this->client->request('PUT','experiments/' . $this->id, ['body' => json_encode($options)]);
+
+        return $response->getBody()->getContents();
+    }
+
+    /**
+     * @return mixed
+     */
+    public function __toString()
+    {
+        return $this->content->getBody()->getContents();
+    }
+}

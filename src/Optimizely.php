@@ -4,6 +4,7 @@ namespace Optimizely;
 
 use GuzzleHttp\Client;
 use Optimizely\API\Project;
+use Optimizely\API\Experiment;
 
 /**
  * Class Optimizely
@@ -23,8 +24,8 @@ class Optimizely
         $this->client = new Client([
             'base_uri' => $this->base_uri,
             'headers' => [
-                'Accept'     => 'application/json',
-                'Token'      => $token
+                'Content-Type'      => 'application/json',
+                'Token'             => $token
             ]
         ]);
     }
@@ -47,5 +48,29 @@ class Optimizely
         $response = $this->client->request('GET', 'projects');
 
         return $response->getBody()->getContents();
+    }
+
+    /**
+     * @param $projectName
+     * @return string
+     */
+    public function create($projectName)
+    {   
+        $options = ['project_name' => $projectName];
+
+        $response = $this->client->request('POST', 'projects', ['body' => json_encode($options)]);
+
+        return $response->getBody()->getContents();
+    }
+
+    /**
+     * @param $projectId
+     * @return string
+     */
+    public function experiment($experimentId)
+    {
+        $response = $this->client->request('GET', "experiments/{$experimentId}");
+
+        return new Experiment($this->client, $response);
     }
 }
