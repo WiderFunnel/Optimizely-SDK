@@ -51,29 +51,6 @@ class Optimizely
         return $response->getBody()->getContents();
     }
 
-    /**
-     * @param $projectName
-     * @return string
-     */
-    public function create($projectName)
-    {   
-        $options = ['project_name' => $projectName];
-
-        $response = $this->client->request('POST', 'projects', ['body' => json_encode($options)]);
-
-        return $response->getBody()->getContents();
-    }
-
-    /**
-     * @param $projectId
-     * @return string
-     */
-    public function experiment($experimentId)
-    {
-        $response = $this->client->request('GET', "experiments/{$experimentId}");
-
-        return new Experiment($this->client, $response);
-    }
 
     /**
      * @param $scheduleId

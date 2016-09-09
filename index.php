@@ -18,7 +18,12 @@ $optimizely = new \Optimizely\Optimizely($token);
 
 //PROJECTS: 
 
-// echo $optimizely->create('foo4');
+
+// echo $optimizely->project($projectId)->create('foobarz');
+
+// echo $optimizely->projects();
+
+// echo $optimizely->project($projectId);
 
 // echo $optimizely->project($projectId)->update(['project_name' => '123foo', 'include_jquery' => true]);
 
@@ -30,9 +35,7 @@ $optimizely = new \Optimizely\Optimizely($token);
 
 // echo $optimizely->project($projectId)->experiments();
 
-// echo $optimizely->project($projectId)->create('FooExp321','foobars123.com', ['status' => 'Paused']);
-
-// echo $optimizely->experiment($experimentId);
+// echo $optimizely->project()->experiment()->create('FooExp321','foobars123.com', ['status' => 'Paused']);
 
 // echo $optimizely->experiment($experimentId)->update(['edit_url' => 'newsite.com']);
 
@@ -46,7 +49,7 @@ $optimizely = new \Optimizely\Optimizely($token);
 
 // echo $optimizely->experiment($experimentId)->schedule($startTime,$endTime);
 
-echo $optimizely->experiment($experimentId)->variations();
+// echo $optimizely->experiment($experimentId)->variations();
 
 //SCHEDULES
 

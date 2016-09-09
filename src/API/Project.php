@@ -47,16 +47,14 @@ class Project extends AbstractAPI
     }
 
     /**
-     * @param $experimentName, $editURL, $options
+     * @param $projectName
      * @return string
      */
-    public function create($experimentName, $editURL, $options = [])
+    public function create($projectName)
     {   
-        $options['description'] = $experimentName;
+        $options = ['project_name' => $projectName];
 
-        $options['edit_url'] = $editURL;
-
-        $response = $this->client->request('POST', 'projects/' . $this->id . '/experiments', ['body' => json_encode($options)]);
+        $response = $this->client->request('POST', 'projects', ['body' => json_encode($options)]);
 
         return $response->getBody()->getContents();
     }
@@ -94,6 +92,17 @@ class Project extends AbstractAPI
         $response = $this->client->request('PUT','projects/' . $this->id, ['body' => json_encode($options)]);
 
         return $response->getBody()->getContents();
+    }
+
+    /**
+     * @param $projectId
+     * @return string
+     */
+    public function experiment($experimentId)
+    {
+        $response = $this->client->request('GET', "experiments/{$experimentId}");
+
+        return new Experiment($this->client, $response);
     }
 
     /**

@@ -36,6 +36,21 @@ class Experiment extends AbstractAPI
         return $response['id'];
     }
 
+     /**
+     * @param $experimentName, $editURL, $options
+     * @return string
+     */
+    public function create($experimentName, $editURL, $options = [])
+    {   
+        $options['description'] = $experimentName;
+
+        $options['edit_url'] = $editURL;
+
+        $response = $this->client->request('POST', 'projects/' . $this->id . '/experiments', ['body' => json_encode($options)]);
+
+        return $response->getBody()->getContents();
+    }
+
    /**
      * @param $options
      * @return string
