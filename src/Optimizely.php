@@ -40,16 +40,21 @@ class Optimizely
 
     /**
      * @param $token
+     * @param bool $oauth
      * @return static
      */
-    public static function create($token)
+    public static function create($token, $oauth = true)
     {
+        $headers = ['Content-Type' => 'application/json', 'Authorization' => "Bearer {$token}"];
+
+        if(!$oauth) {
+            $headers['Token'] = $token;
+            unset($headers['Authorization']);
+        }
+
         $client = new Client([
             'base_uri' => self::BASE_URI,
-            'headers' => [
-                'Content-Type' => 'application/json',
-                'Token' => $token
-            ]
+            'headers' => $headers
         ]);
 
         return new static($client);
