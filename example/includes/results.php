@@ -5,4 +5,4 @@
  */
 
 // Fetch the results of an experiments
-$optimizely->experiment($experimentId)->legacyResults();
+dump($optimizely->experiment($experimentId)->legacyResults());

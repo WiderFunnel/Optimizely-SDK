@@ -5,7 +5,7 @@ use Optimizely\Optimizely;
 
 require_once __DIR__.'/../vendor/autoload.php';
 
-$dotenv = new Dotenv(__DIR__);
+$dotenv = new Dotenv(__DIR__ . '/../');
 $dotenv->load();
 
 $token = getenv('OPTIMIZELY_TOKEN');
@@ -21,12 +21,12 @@ $dimensionId = 7455900055;
 
 $optimizely = Optimizely::create($token);
 
-include __DIR__ . '/includes/projects.php';
-include __DIR__ . '/includes/experiments.php';
-include __DIR__ . '/includes/schedules.php';
-include __DIR__ . '/includes/variations.php';
-include __DIR__ . '/includes/goals.php';
-include __DIR__ . '/includes/audiences.php';
-include __DIR__ . '/includes/uploaded-lists.php';
-include __DIR__ . '/includes/dimensions.php';
+//include __DIR__ . '/includes/projects.php';
+//include __DIR__ . '/includes/experiments.php';
+//include __DIR__ . '/includes/schedules.php';
+//include __DIR__ . '/includes/variations.php';
+//include __DIR__ . '/includes/goals.php';
+//include __DIR__ . '/includes/audiences.php';
+//include __DIR__ . '/includes/uploaded-lists.php';
+//include __DIR__ . '/includes/dimensions.php';
 include __DIR__ . '/includes/results.php';
