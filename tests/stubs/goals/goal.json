@@ -1,0 +1,21 @@
+{
+    "is_editable": null,
+    "target_to_experiments": true,
+    "archived": false,
+    "description": "Confirming if the navigation is used more or less. #nav",
+    "id": 543071054,
+    "target_urls": [],
+    "title": "Navigation button clicks",
+    "event": "nav_button_clicks",
+    "url_match_types": [],
+    "project_id": 547944643,
+    "goal_type": 0,
+    "experiment_ids": [
+        561450169
+    ],
+    "selector": ".portal-navigation > button",
+    "created": "2014-01-09T23:47:51.042343Z",
+    "last_modified": "2014-12-08T12:33:27.045543Z",
+    "target_url_match_types": [],
+    "urls": []
+}

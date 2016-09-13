@@ -1,0 +1,11 @@
+{
+    "is_paused": false,
+    "description": "Variation #2",
+    "weight": 5000,
+    "created": "2014-04-17T00:47:06.388650Z",
+    "section_id": null,
+    "js_component": "alert('It works!');",
+    "experiment_id": 854484703,
+    "project_id": 859720118,
+    "id": 859611684
+}

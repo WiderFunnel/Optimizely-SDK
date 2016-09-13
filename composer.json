@@ -1,0 +1,43 @@
+{
+    "name": "widerfunnel/optimizely-sdk",
+    "type": "library",
+    "description": "Optimizely API PHP SDK",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Valentin Prugnaud",
+            "email": "valentin.prugnaud@widerfunnel.com",
+            "homepage": "https://github.com/widerfunnel-labs"
+        }
+    ],
+    "keywords": [
+        "optimizely",
+        "api",
+        "sdk",
+        "wrapper",
+        "ab-testing",
+        "cro",
+        "conversion rate optimization"
+    ],
+    "require": {
+        "php": ">=7.0",
+        "guzzlehttp/guzzle": "^6.2",
+        "tightenco/collect": "^5.3"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^5.5",
+        "symfony/var-dumper": "^3.1",
+        "nesbot/carbon": "^1.21",
+        "vlucas/phpdotenv": "^2.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Optimizely\\":"src"
+        }
+    },
+    "autoload-dev": {
+        "classmap": [
+            "tests/TestCase.php"
+        ]
+    }
+}

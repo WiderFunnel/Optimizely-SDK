@@ -1,0 +1,42 @@
+[
+    {
+        "variation_id": "925781903",
+        "variation_name": "My Variation",
+        "goal_id": 820360058,
+        "goal_name": "Engagement",
+        "baseline_id": "924521605",
+        "begin_time": "2014-07-25T20:30:00Z",
+        "end_time": "2014-07-25T20:38:09Z",
+        "visitors": 853,
+        "conversions": 204,
+        "conversion_rate": 0.239,
+        "status": "inconclusive",
+        "improvement": 0.014,
+        "statistical_significance": 0.631,
+        "difference": 0.014,
+        "difference_confidence_interval_min": 0.008,
+        "difference_confidence_interval_max": 0.020,
+        "visitors_until_statistically_significant": 100,
+        "is_revenue": false
+    },
+    {
+        "variation_id": "924521605",
+        "variation_name": "Original",
+        "goal_id": 820360058,
+        "goal_name": "Engagement",
+        "baseline_id": "924521605",
+        "begin_time": "2014-07-25T20:30:00Z",
+        "end_time": "2014-07-25T20:38:09Z",
+        "visitors": 841,
+        "conversions": 189,
+        "conversion_rate": 0.225,
+        "status": "baseline",
+        "improvement": 0,
+        "statistical_significance": 0,
+        "difference": 0,
+        "difference_confidence_interval_min": 0,
+        "difference_confidence_interval_max": 0,
+        "visitors_until_statistically_significant": 100,
+        "is_revenue": false
+    }
+]

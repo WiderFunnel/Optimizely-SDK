@@ -1,0 +1,11 @@
+{
+    "description": "People from Canada",
+    "project_id": 1234,
+    "id": 567,
+    "name": "Canadians",
+    "created": "2014-05-24T00:13:52.784580Z",
+    "conditions": "[\"and\", {\"type\":\"browser\", \"value\":\"gc\"}, {\"type\":\"query\", \"name\":\"utm_campaign\", \"value\":\"true\"}]",
+    "last_modified": "2014-06-10T22:12:21.707170Z",
+    "segmentation": false,
+    "archived": false
+}

@@ -1,0 +1,34 @@
+{
+    "id": 791495413,
+    "percentage_included": 10000,
+    "display_goal_order_lst": [],
+    "is_multivariate": false,
+    "project_id": 754864960,
+    "variation_ids": [
+        800227656,
+        800227657
+    ],
+    "status": "Not started",
+    "url_conditions": [
+        {
+            "index": 0,
+            "match_type": "simple",
+            "created": "2014-04-12T19:10:53.806640Z",
+            "value": "http://blog.optimizely.com/2014/04/11/10-reasons-why-your-agency-should-offer-optimization/",
+            "last_modified": "2014-04-12T19:10:53.806650Z",
+            "negate": false
+        }
+    ],
+    "description": "Wordpress: 10 Reasons Why Your Agency Should Offer Optimization ",
+    "last_modified": "2014-04-12T19:10:53.806650Z",
+    "activation_mode": "immediate",
+    "details": "Experiment to test out blog post.",
+    "custom_css": "",
+    "created": "2014-04-12T19:10:53.588450Z",
+    "custom_js": "",
+    "primary_goal_id": null,
+    "experiment_type": "ab",
+    "shareable_results_link": "https://www.optimizely.com/results?experiment_id=791495413&token=fh3lk2hrlk",
+    "edit_url": "http://blog.optimizely.com/2014/04/11/10-reasons-why-your-agency-should-offer-optimization/",
+    "audience_ids": []
+}
