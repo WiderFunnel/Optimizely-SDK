@@ -1,5 +1,9 @@
 <?php
 
+namespace Optimizely\Tests;
+
+use PHPUnit_Framework_TestCase;
+
 /**
  * Class TestCase
  */
