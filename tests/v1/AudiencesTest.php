@@ -1,5 +1,9 @@
 <?php
 
+namespace Optimizely\Tests\v1;
+
+use Optimizely\Tests\TestCase;
+
 /**
  * Class AudiencesTest
  */

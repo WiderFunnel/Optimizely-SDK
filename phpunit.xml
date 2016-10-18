@@ -9,8 +9,11 @@
          processIsolation="false"
          stopOnFailure="false">
     <testsuites>
-        <testsuite name="Optimizely SDK Tests">
-            <directory>./tests/</directory>
+        <testsuite name="v1.0">
+            <directory>./tests/v1</directory>
+        </testsuite>
+        <testsuite name="v2.0">
+            <directory>./tests/v2</directory>
         </testsuite>
     </testsuites>
     <filter>

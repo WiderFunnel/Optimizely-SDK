@@ -1,4 +1,8 @@
 <?php
+
+namespace Optimizely\Tests\v1;
+
+use Optimizely\Tests\TestCase;
 use Optimizely\Items\Goal;
 
 /**
