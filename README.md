@@ -4,6 +4,12 @@
 
 PHP Wrapper to interact with the Optimizely API.
 
+## Installation
+
+```bash
+composer require widerfunnel/optimizely-sdk
+```
+
 ## Usage
 
 Simply create an Optimizely object, with a valid OAuth Token in the constructor: 
@@ -111,7 +117,10 @@ $optimizely->variation($variationId)->delete();
 
 ```php
 // Fetch the results of an experiments
-dump($optimizely->experiment($experimentId)->legacyResults());
+$optimizely->experiment($experimentId)->results();
+
+// Fetch the results of an experiments (legacy version)
+$optimizely->experiment($experimentId)->legacyResults();
 ```
 
 ### Schedules
