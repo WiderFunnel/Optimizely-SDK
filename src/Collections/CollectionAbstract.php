@@ -1,12 +1,12 @@
 <?php
 
-namespace Optimizely\Collections;
+namespace GrowthOptimized\Collections;
 
 use Illuminate\Support\Collection;
 
 /**
  * Class CollectionAbstract
- * @package Optimizely\Collections
+ * @package GrowthOptimized\Collections
  */
 abstract class CollectionAbstract extends Collection
 {

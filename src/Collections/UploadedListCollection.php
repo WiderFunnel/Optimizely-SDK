@@ -1,12 +1,12 @@
 <?php
 
-namespace Optimizely\Collections;
+namespace GrowthOptimized\Collections;
 
-use Optimizely\Items\UploadedList;
+use GrowthOptimized\Items\UploadedList;
 
 /**
  * Class UploadedListCollection
- * @package Optimizely\Collections
+ * @package GrowthOptimized\Collections
  */
 class UploadedListCollection extends CollectionAbstract
 {

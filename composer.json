@@ -32,12 +32,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Optimizely\\":"src"
+            "GrowthOptimized\\":"src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Optimizely\\Tests\\":"tests"
+            "GrowthOptimized\\Tests\\":"tests"
         }
     }
 }

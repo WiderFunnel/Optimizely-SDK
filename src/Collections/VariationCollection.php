@@ -1,12 +1,12 @@
 <?php
 
-namespace Optimizely\Collections;
+namespace GrowthOptimized\Collections;
 
-use Optimizely\Items\Variation;
+use GrowthOptimized\Items\Variation;
 
 /**
  * Class VariationCollection
- * @package Optimizely\Collections
+ * @package GrowthOptimized\Collections
  */
 class VariationCollection extends CollectionAbstract
 {
