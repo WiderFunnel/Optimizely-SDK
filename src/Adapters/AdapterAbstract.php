@@ -1,13 +1,13 @@
 <?php
 
-namespace Optimizely\Adapters;
+namespace GrowthOptimized\Adapters;
 
 use GuzzleHttp\ClientInterface;
 use Psr\Http\Message\ResponseInterface;
 
 /**
  * Class AdapterAbstract
- * @package Optimizely\Adapters
+ * @package GrowthOptimized\Adapters
  */
 class AdapterAbstract
 {

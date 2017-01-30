@@ -1,10 +1,10 @@
 <?php
 
-namespace Optimizely\Items;
+namespace GrowthOptimized\Items;
 
 /**
  * Class Project
- * @package Optimizely\Items;
+ * @package GrowthOptimized\Items;
  */
 class Project extends ItemAbstract
 {

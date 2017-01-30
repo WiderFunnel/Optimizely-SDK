@@ -1,6 +1,6 @@
 <?php
 
-namespace Optimizely\Tests;
+namespace GrowthOptimized\Tests;
 
 use PHPUnit_Framework_TestCase;
 
@@ -33,7 +33,7 @@ class TestCase extends PHPUnit_Framework_TestCase
         $deleteResponse->method('getBody')->willReturn(null);
         $deleteResponse->method('getStatusCode')->willReturn(204);
 
-        $client = $this->createMock(\Optimizely\Http\Client::class);
+        $client = $this->createMock(\GrowthOptimized\Http\Client::class);
         $client->method('get')->willReturn($response);
         $client->method('put')->willReturn($response);
         $client->method('post')->willReturn($response);

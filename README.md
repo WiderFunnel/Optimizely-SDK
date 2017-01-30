@@ -117,7 +117,7 @@ $optimizely->variation($variationId)->delete();
 
 ```php
 // Fetch the results of an experiments
-dump($optimizely->experiment($experimentId)->legacyResults());
+$optimizely->experiment($experimentId)->legacyResults();
 ```
 
 ### Schedules

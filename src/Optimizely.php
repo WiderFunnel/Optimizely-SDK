@@ -1,21 +1,21 @@
 <?php
 
-namespace Optimizely;
+namespace GrowthOptimized;
 
 use GuzzleHttp\ClientInterface;
-use Optimizely\Adapters\AudiencesAdapter;
-use Optimizely\Adapters\DimensionsAdapter;
-use Optimizely\Adapters\ExperimentsAdapter;
-use Optimizely\Adapters\GoalsAdapter;
-use Optimizely\Adapters\ProjectsAdapter;
-use Optimizely\Adapters\SchedulesAdapter;
-use Optimizely\Adapters\UploadedListsAdapter;
-use Optimizely\Adapters\VariationsAdapter;
-use Optimizely\Http\Client;
+use GrowthOptimized\Adapters\AudiencesAdapter;
+use GrowthOptimized\Adapters\DimensionsAdapter;
+use GrowthOptimized\Adapters\ExperimentsAdapter;
+use GrowthOptimized\Adapters\GoalsAdapter;
+use GrowthOptimized\Adapters\ProjectsAdapter;
+use GrowthOptimized\Adapters\SchedulesAdapter;
+use GrowthOptimized\Adapters\UploadedListsAdapter;
+use GrowthOptimized\Adapters\VariationsAdapter;
+use GrowthOptimized\Http\Client;
 
 /**
  * Class Optimizely
- * @package Optimizely
+ * @package GrowthOptimized
  */
 class Optimizely
 {

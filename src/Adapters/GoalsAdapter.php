@@ -1,12 +1,12 @@
 <?php
 
-namespace Optimizely\Adapters;
+namespace GrowthOptimized\Adapters;
 
-use Optimizely\Items\Goal;
+use GrowthOptimized\Items\Goal;
 
 /**
  * Class GoalsAdapter
- * @package Optimizely
+ * @package GrowthOptimized
  */
 class GoalsAdapter extends AdapterAbstract
 {

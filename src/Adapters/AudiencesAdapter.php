@@ -1,12 +1,12 @@
 <?php
 
-namespace Optimizely\Adapters;
+namespace GrowthOptimized\Adapters;
 
-use Optimizely\Items\Audience;
+use GrowthOptimized\Items\Audience;
 
 /**
  * Class AudiencesAdapter
- * @package Optimizely
+ * @package GrowthOptimized
  */
 class AudiencesAdapter extends AdapterAbstract
 {

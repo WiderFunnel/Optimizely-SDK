@@ -1,17 +1,17 @@
 <?php
 
-namespace Optimizely\Adapters;
+namespace GrowthOptimized\Adapters;
 
-use Optimizely\Collections\ResultCollection;
-use Optimizely\Collections\ScheduleCollection;
-use Optimizely\Collections\VariationCollection;
-use Optimizely\Items\Experiment;
-use Optimizely\Items\Schedule;
-use Optimizely\Items\Variation;
+use GrowthOptimized\Collections\ResultCollection;
+use GrowthOptimized\Collections\ScheduleCollection;
+use GrowthOptimized\Collections\VariationCollection;
+use GrowthOptimized\Items\Experiment;
+use GrowthOptimized\Items\Schedule;
+use GrowthOptimized\Items\Variation;
 
 /**
  * Class ExperimentsAdapter
- * @package Optimizely
+ * @package GrowthOptimized
  */
 class ExperimentsAdapter extends AdapterAbstract
 {

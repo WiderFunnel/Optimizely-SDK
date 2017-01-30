@@ -1,10 +1,10 @@
 <?php
 
-namespace Optimizely\Items;
+namespace GrowthOptimized\Items;
 
 /**
  * Class Goal
- * @package Optimizely\Items;
+ * @package GrowthOptimized\Items;
  */
 class Goal extends ItemAbstract
 {
