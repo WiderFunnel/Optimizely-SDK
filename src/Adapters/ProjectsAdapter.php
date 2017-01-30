@@ -1,23 +1,23 @@
 <?php
 
-namespace Optimizely\Adapters;
+namespace GrowthOptimized\Adapters;
 
-use Optimizely\Collections\AudienceCollection;
-use Optimizely\Collections\DimensionCollection;
-use Optimizely\Collections\ExperimentCollection;
-use Optimizely\Collections\GoalCollection;
-use Optimizely\Collections\ProjectCollection;
-use Optimizely\Collections\UploadedListCollection;
-use Optimizely\Items\Audience;
-use Optimizely\Items\Dimension;
-use Optimizely\Items\Experiment;
-use Optimizely\Items\Goal;
-use Optimizely\Items\Project;
-use Optimizely\Items\UploadedList;
+use GrowthOptimized\Collections\AudienceCollection;
+use GrowthOptimized\Collections\DimensionCollection;
+use GrowthOptimized\Collections\ExperimentCollection;
+use GrowthOptimized\Collections\GoalCollection;
+use GrowthOptimized\Collections\ProjectCollection;
+use GrowthOptimized\Collections\UploadedListCollection;
+use GrowthOptimized\Items\Audience;
+use GrowthOptimized\Items\Dimension;
+use GrowthOptimized\Items\Experiment;
+use GrowthOptimized\Items\Goal;
+use GrowthOptimized\Items\Project;
+use GrowthOptimized\Items\UploadedList;
 
 /**
  * Class ProjectsAdapter
- * @package Optimizely
+ * @package GrowthOptimized
  */
 class ProjectsAdapter extends AdapterAbstract
 {

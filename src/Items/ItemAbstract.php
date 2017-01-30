@@ -1,13 +1,13 @@
 <?php
 
-namespace Optimizely\Items;
+namespace GrowthOptimized\Items;
 
 use Illuminate\Contracts\Support\Arrayable;
 use Illuminate\Contracts\Support\Jsonable;
 
 /**
  * Class ItemAbstract
- * @package Optimizely\Items
+ * @package GrowthOptimized\Items
  */
 abstract class ItemAbstract implements Arrayable, Jsonable
 {

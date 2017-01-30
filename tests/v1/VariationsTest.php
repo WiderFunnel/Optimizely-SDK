@@ -1,8 +1,8 @@
 <?php
 
-namespace Optimizely\Tests\v1;
+namespace GrowthOptimized\Tests\v1;
 
-use Optimizely\Tests\TestCase;
+use GrowthOptimized\Tests\TestCase;
 
 /**
  * Class VariationsTest
@@ -14,12 +14,12 @@ class VariationsTest extends TestCase
     {
         $client = $this->fakeClient('variations/variations');
 
-        $optimizely = new \Optimizely\Optimizely($client);
+        $optimizely = new \GrowthOptimized\Optimizely($client);
         $variations = $optimizely->experiments()->variations('1');
 
-        $this->assertInstanceOf(\Optimizely\Collections\VariationCollection::class, $variations);
+        $this->assertInstanceOf(\GrowthOptimized\Collections\VariationCollection::class, $variations);
         $this->assertObjectHasAttribute('items', $variations);
-        $this->assertInstanceOf(\Optimizely\Items\Variation::class, $variations->first());
+        $this->assertInstanceOf(\GrowthOptimized\Items\Variation::class, $variations->first());
         $this->assertObjectHasAttribute('id', $variations->first());
         $this->assertJsonStringEqualsJsonFile($this->getStub('variations/variations'), $variations->toJson());
     }
@@ -29,10 +29,10 @@ class VariationsTest extends TestCase
     {
         $client = $this->fakeClient('variations/variation');
 
-        $optimizely = new \Optimizely\Optimizely($client);
+        $optimizely = new \GrowthOptimized\Optimizely($client);
         $variation = $optimizely->variations()->find('1');
 
-        $this->assertInstanceOf(\Optimizely\Items\Variation::class, $variation);
+        $this->assertInstanceOf(\GrowthOptimized\Items\Variation::class, $variation);
         $this->assertJsonStringEqualsJsonFile($this->getStub('variations/variation'), $variation->toJson());
     }
 
@@ -41,12 +41,12 @@ class VariationsTest extends TestCase
     {
         $client = $this->fakeClient('variations/variation');
 
-        $optimizely = new \Optimizely\Optimizely($client);
+        $optimizely = new \GrowthOptimized\Optimizely($client);
         $variation = $optimizely->experiment('1')->createVariation('Variation #2', [
             'start_time' => '2015-01-01T08:00:00Z'
         ]);
 
-        $this->assertInstanceOf(\Optimizely\Items\Variation::class, $variation);
+        $this->assertInstanceOf(\GrowthOptimized\Items\Variation::class, $variation);
         $this->assertJsonStringEqualsJsonFile($this->getStub('variations/variation'), $variation->toJson());
     }
 
@@ -55,10 +55,10 @@ class VariationsTest extends TestCase
     {
         $client = $this->fakeClient('variations/variation');
 
-        $optimizely = new \Optimizely\Optimizely($client);
+        $optimizely = new \GrowthOptimized\Optimizely($client);
         $variation = $optimizely->variation('1')->update(['start_time' => '2015-01-01T08:00:00Z']);
 
-        $this->assertInstanceOf(\Optimizely\Items\Variation::class, $variation);
+        $this->assertInstanceOf(\GrowthOptimized\Items\Variation::class, $variation);
         $this->assertJsonStringEqualsJsonFile($this->getStub('variations/variation'), $variation->toJson());
     }
 
@@ -67,7 +67,7 @@ class VariationsTest extends TestCase
     {
         $client = $this->fakeClient('variations/variation');
 
-        $optimizely = new \Optimizely\Optimizely($client);
+        $optimizely = new \GrowthOptimized\Optimizely($client);
         $variation = $optimizely->variations()->delete('1');
 
         $this->assertTrue($variation);

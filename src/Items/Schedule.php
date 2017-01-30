@@ -1,10 +1,10 @@
 <?php
 
-namespace Optimizely\Items;
+namespace GrowthOptimized\Items;
 
 /**
  * Class Schedule
- * @package Optimizely\Items;
+ * @package GrowthOptimized\Items;
  */
 class Schedule extends ItemAbstract
 {

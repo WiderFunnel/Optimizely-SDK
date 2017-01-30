@@ -1,12 +1,12 @@
 <?php
 
-namespace Optimizely\Http;
+namespace GrowthOptimized\Http;
 
 use GuzzleHttp\Client as BaseClient;
 
 /**
  * Class HttpClient
- * @package Optimizely
+ * @package GrowthOptimized
  */
 class Client extends BaseClient
 {

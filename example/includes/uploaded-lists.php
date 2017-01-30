@@ -1,6 +1,6 @@
 <?php
 
-use Optimizely\Items\UploadedList;
+use GrowthOptimized\Items\UploadedList;
 
 /**
  * UPLOADED LISTS (TARGETING LISTS):

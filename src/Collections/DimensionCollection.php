@@ -1,12 +1,12 @@
 <?php
 
-namespace Optimizely\Collections;
+namespace GrowthOptimized\Collections;
 
-use Optimizely\Items\Dimension;
+use GrowthOptimized\Items\Dimension;
 
 /**
  * Class DimensionCollection
- * @package Optimizely\Collections
+ * @package GrowthOptimized\Collections
  */
 class DimensionCollection extends CollectionAbstract
 {

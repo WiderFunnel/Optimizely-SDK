@@ -1,8 +1,8 @@
 <?php
 
-namespace Optimizely\Tests\v1;
+namespace GrowthOptimized\Tests\v1;
 
-use Optimizely\Tests\TestCase;
+use GrowthOptimized\Tests\TestCase;
 
 /**
  * Class ProjectsTest
@@ -14,12 +14,12 @@ class ProjectsTest extends TestCase
     {
         $client = $this->fakeClient('projects/projects');
 
-        $optimizely = new \Optimizely\Optimizely($client);
+        $optimizely = new \GrowthOptimized\Optimizely($client);
         $projects = $optimizely->projects()->all();
 
-        $this->assertInstanceOf(\Optimizely\Collections\ProjectCollection::class, $projects);
+        $this->assertInstanceOf(\GrowthOptimized\Collections\ProjectCollection::class, $projects);
         $this->assertObjectHasAttribute('items', $projects);
-        $this->assertInstanceOf(\Optimizely\Items\Project::class, $projects->first());
+        $this->assertInstanceOf(\GrowthOptimized\Items\Project::class, $projects->first());
         $this->assertObjectHasAttribute('id', $projects->first());
         $this->assertJsonStringEqualsJsonFile($this->getStub('projects/projects'), $projects->toJson());
     }
@@ -29,10 +29,10 @@ class ProjectsTest extends TestCase
     {
         $client = $this->fakeClient('projects/project');
 
-        $optimizely = new \Optimizely\Optimizely($client);
+        $optimizely = new \GrowthOptimized\Optimizely($client);
         $project = $optimizely->projects()->find('1');
 
-        $this->assertInstanceOf(\Optimizely\Items\Project::class, $project);
+        $this->assertInstanceOf(\GrowthOptimized\Items\Project::class, $project);
         $this->assertJsonStringEqualsJsonFile($this->getStub('projects/project'), $project->toJson());
     }
 
@@ -41,10 +41,10 @@ class ProjectsTest extends TestCase
     {
         $client = $this->fakeClient('projects/project');
 
-        $optimizely = new \Optimizely\Optimizely($client);
+        $optimizely = new \GrowthOptimized\Optimizely($client);
         $project = $optimizely->projects()->create('My even newer project name');
 
-        $this->assertInstanceOf(\Optimizely\Items\Project::class, $project);
+        $this->assertInstanceOf(\GrowthOptimized\Items\Project::class, $project);
         $this->assertJsonStringEqualsJsonFile($this->getStub('projects/project'), $project->toJson());
     }
 
@@ -53,10 +53,10 @@ class ProjectsTest extends TestCase
     {
         $client = $this->fakeClient('projects/project');
 
-        $optimizely = new \Optimizely\Optimizely($client);
+        $optimizely = new \GrowthOptimized\Optimizely($client);
         $project = $optimizely->project('1')->update(['project_name' => 'My even newer project name']);
 
-        $this->assertInstanceOf(\Optimizely\Items\Project::class, $project);
+        $this->assertInstanceOf(\GrowthOptimized\Items\Project::class, $project);
         $this->assertJsonStringEqualsJsonFile($this->getStub('projects/project'), $project->toJson());
     }
 
@@ -65,10 +65,10 @@ class ProjectsTest extends TestCase
     {
         $client = $this->fakeClient('projects/project');
 
-        $optimizely = new \Optimizely\Optimizely($client);
+        $optimizely = new \GrowthOptimized\Optimizely($client);
         $project = $optimizely->project('1')->activate();
 
-        $this->assertInstanceOf(\Optimizely\Items\Project::class, $project);
+        $this->assertInstanceOf(\GrowthOptimized\Items\Project::class, $project);
         $this->assertJsonStringEqualsJsonFile($this->getStub('projects/project'), $project->toJson());
     }
 
@@ -77,10 +77,10 @@ class ProjectsTest extends TestCase
     {
         $client = $this->fakeClient('projects/project');
 
-        $optimizely = new \Optimizely\Optimizely($client);
+        $optimizely = new \GrowthOptimized\Optimizely($client);
         $project = $optimizely->project('1')->archive();
 
-        $this->assertInstanceOf(\Optimizely\Items\Project::class, $project);
+        $this->assertInstanceOf(\GrowthOptimized\Items\Project::class, $project);
         $this->assertJsonStringEqualsJsonFile($this->getStub('projects/project'), $project->toJson());
     }
 }

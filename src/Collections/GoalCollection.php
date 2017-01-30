@@ -1,12 +1,12 @@
 <?php
 
-namespace Optimizely\Collections;
+namespace GrowthOptimized\Collections;
 
-use Optimizely\Items\Goal;
+use GrowthOptimized\Items\Goal;
 
 /**
  * Class GoalCollection
- * @package Optimizely\Collections
+ * @package GrowthOptimized\Collections
  */
 class GoalCollection extends CollectionAbstract
 {

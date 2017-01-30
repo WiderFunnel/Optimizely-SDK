@@ -1,12 +1,12 @@
 <?php
 
-namespace Optimizely\Adapters;
+namespace GrowthOptimized\Adapters;
 
-use Optimizely\Items\Variation;
+use GrowthOptimized\Items\Variation;
 
 /**
  * Class VariationsAdapter
- * @package Optimizely
+ * @package GrowthOptimized
  */
 class VariationsAdapter extends AdapterAbstract
 {

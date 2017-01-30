@@ -1,12 +1,12 @@
 <?php
 
-namespace Optimizely\Collections;
+namespace GrowthOptimized\Collections;
 
-use Optimizely\Items\Schedule;
+use GrowthOptimized\Items\Schedule;
 
 /**
  * Class ScheduleCollection
- * @package Optimizely\Collections
+ * @package GrowthOptimized\Collections
  */
 class ScheduleCollection extends CollectionAbstract
 {

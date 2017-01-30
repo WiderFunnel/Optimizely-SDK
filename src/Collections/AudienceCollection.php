@@ -1,12 +1,12 @@
 <?php
 
-namespace Optimizely\Collections;
+namespace GrowthOptimized\Collections;
 
-use Optimizely\Items\Audience;
+use GrowthOptimized\Items\Audience;
 
 /**
  * Class AudienceCollection
- * @package Optimizely\Collections
+ * @package GrowthOptimized\Collections
  */
 class AudienceCollection extends CollectionAbstract
 {
