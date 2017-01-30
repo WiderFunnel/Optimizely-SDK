@@ -1,5 +1,5 @@
 {
-    "name": "widerfunnel/optimizely-sdk",
+    "name": "growthoptimized/optimizely-sdk",
     "type": "library",
     "description": "Optimizely API PHP SDK",
     "license": "MIT",
@@ -7,7 +7,7 @@
         {
             "name": "Valentin Prugnaud",
             "email": "valentin.prugnaud@widerfunnel.com",
-            "homepage": "https://github.com/widerfunnel-labs"
+            "homepage": "https://github.com/GrowthOptimized/Optimizely-SDK"
         }
     ],
     "keywords": [
