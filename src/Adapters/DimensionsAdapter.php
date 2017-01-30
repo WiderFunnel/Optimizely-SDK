@@ -1,12 +1,12 @@
 <?php
 
-namespace Optimizely\Adapters;
+namespace GrowthOptimized\Adapters;
 
-use Optimizely\Items\Dimension;
+use GrowthOptimized\Items\Dimension;
 
 /**
  * Class DimensionsAdapter
- * @package Optimizely
+ * @package GrowthOptimized
  */
 class DimensionsAdapter extends AdapterAbstract
 {

@@ -1,12 +1,12 @@
 <?php
 
-namespace Optimizely\Adapters;
+namespace GrowthOptimized\Adapters;
 
-use Optimizely\Items\Schedule;
+use GrowthOptimized\Items\Schedule;
 
 /**
  * Class SchedulesAdapter
- * @package Optimizely
+ * @package GrowthOptimized
  */
 class SchedulesAdapter extends AdapterAbstract
 {

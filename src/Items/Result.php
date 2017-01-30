@@ -1,10 +1,10 @@
 <?php
 
-namespace Optimizely\Items;
+namespace GrowthOptimized\Items;
 
 /**
  * Class Result
- * @package Optimizely\Items;
+ * @package GrowthOptimized\Items;
  */
 class Result extends ItemAbstract
 {

@@ -1,12 +1,12 @@
 <?php
 
-namespace Optimizely\Adapters;
+namespace GrowthOptimized\Adapters;
 
-use Optimizely\Items\UploadedList;
+use GrowthOptimized\Items\UploadedList;
 
 /**
  * Class UploadedListsAdapter
- * @package Optimizely
+ * @package GrowthOptimized
  */
 class UploadedListsAdapter extends AdapterAbstract
 {

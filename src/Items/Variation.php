@@ -1,10 +1,10 @@
 <?php
 
-namespace Optimizely\Items;
+namespace GrowthOptimized\Items;
 
 /**
  * Class Variation
- * @package Optimizely\Items;
+ * @package GrowthOptimized\Items;
  */
 class Variation extends ItemAbstract
 {

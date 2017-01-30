@@ -1,8 +1,8 @@
 <?php
 
-namespace Optimizely\Tests\v1;
+namespace GrowthOptimized\Tests\v1;
 
-use Optimizely\Tests\TestCase;
+use GrowthOptimized\Tests\TestCase;
 
 /**
  * Class DimensionsTest
@@ -14,12 +14,12 @@ class DimensionsTest extends TestCase
     {
         $client = $this->fakeClient('dimensions/dimensions');
 
-        $optimizely = new \Optimizely\Optimizely($client);
+        $optimizely = new \GrowthOptimized\Optimizely($client);
         $dimensions = $optimizely->projects()->dimensions('1');
 
-        $this->assertInstanceOf(\Optimizely\Collections\DimensionCollection::class, $dimensions);
+        $this->assertInstanceOf(\GrowthOptimized\Collections\DimensionCollection::class, $dimensions);
         $this->assertObjectHasAttribute('items', $dimensions);
-        $this->assertInstanceOf(\Optimizely\Items\Dimension::class, $dimensions->first());
+        $this->assertInstanceOf(\GrowthOptimized\Items\Dimension::class, $dimensions->first());
         $this->assertObjectHasAttribute('id', $dimensions->first());
         $this->assertJsonStringEqualsJsonFile($this->getStub('dimensions/dimensions'), $dimensions->toJson());
     }
@@ -29,10 +29,10 @@ class DimensionsTest extends TestCase
     {
         $client = $this->fakeClient('dimensions/dimension');
 
-        $optimizely = new \Optimizely\Optimizely($client);
+        $optimizely = new \GrowthOptimized\Optimizely($client);
         $dimension = $optimizely->dimensions()->find('1');
 
-        $this->assertInstanceOf(\Optimizely\Items\Dimension::class, $dimension);
+        $this->assertInstanceOf(\GrowthOptimized\Items\Dimension::class, $dimension);
         $this->assertJsonStringEqualsJsonFile($this->getStub('dimensions/dimension'), $dimension->toJson());
     }
 
@@ -41,10 +41,10 @@ class DimensionsTest extends TestCase
     {
         $client = $this->fakeClient('dimensions/dimension');
 
-        $optimizely = new \Optimizely\Optimizely($client);
+        $optimizely = new \GrowthOptimized\Optimizely($client);
         $dimension = $optimizely->project('1')->createDimension("Canadians");
 
-        $this->assertInstanceOf(\Optimizely\Items\Dimension::class, $dimension);
+        $this->assertInstanceOf(\GrowthOptimized\Items\Dimension::class, $dimension);
         $this->assertJsonStringEqualsJsonFile($this->getStub('dimensions/dimension'), $dimension->toJson());
     }
 
@@ -53,10 +53,10 @@ class DimensionsTest extends TestCase
     {
         $client = $this->fakeClient('dimensions/dimension');
 
-        $optimizely = new \Optimizely\Optimizely($client);
+        $optimizely = new \GrowthOptimized\Optimizely($client);
         $dimension = $optimizely->dimension('1')->update(['name' => 'Canadians']);
 
-        $this->assertInstanceOf(\Optimizely\Items\Dimension::class, $dimension);
+        $this->assertInstanceOf(\GrowthOptimized\Items\Dimension::class, $dimension);
         $this->assertJsonStringEqualsJsonFile($this->getStub('dimensions/dimension'), $dimension->toJson());
     }
 
@@ -65,7 +65,7 @@ class DimensionsTest extends TestCase
     {
         $client = $this->fakeClient('dimensions/dimension');
 
-        $optimizely = new \Optimizely\Optimizely($client);
+        $optimizely = new \GrowthOptimized\Optimizely($client);
         $dimension = $optimizely->dimension('1')->delete();
 
         $this->assertTrue($dimension);
