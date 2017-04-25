@@ -18,7 +18,7 @@ Simply create an Optimizely object, with a valid OAuth Token in the constructor:
 $optimizely = Optimizely::create($token);
 ```
 
-If you wish to use the token based authentication, simply pass `true` as a second argument: 
+If you wish to use the token based authentication, simply pass `false` as a second argument: 
 
 ```php
 $optimizely = Optimizely::create($token, true);
@@ -87,6 +87,11 @@ $optimizely->experiment($experimentId)->archive();
 ```php
 // Fetch variations for a given experiment
 $optimizely->experiment($experimentId)->variations();
+
+// Create variation
+$optimizely->experiment($experimentId)->createVariations('varA', [
+    'weight' => 25
+]);
 
 // Find a variation
 $optimizely->variations()->find($variationId);
