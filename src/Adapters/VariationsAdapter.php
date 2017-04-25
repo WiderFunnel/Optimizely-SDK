@@ -10,6 +10,7 @@ use GrowthOptimized\Items\Variation;
  */
 class VariationsAdapter extends AdapterAbstract
 {
+
     /**
      * @param $variationId
      * @return Variation

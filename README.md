@@ -88,6 +88,11 @@ $optimizely->experiment($experimentId)->archive();
 // Fetch variations for a given experiment
 $optimizely->experiment($experimentId)->variations();
 
+// Create variation
+$optimizely->experiment($experimentId)->createVariations('varA', [
+    'weight' => 25
+]);
+
 // Find a variation
 $optimizely->variations()->find($variationId);
 
