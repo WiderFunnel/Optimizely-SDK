@@ -141,7 +141,7 @@ class ExperimentsAdapter extends AdapterAbstract
      */
     public function createVariation($description, array $attributes = [])
     {
-        $attributes = array_merge(compact('description'));
+        $attributes = array_merge(compact('description'), $attributes);
 
         $response = $this->client->post("experiments/{$this->getResourceId()}/variations", $attributes);
 

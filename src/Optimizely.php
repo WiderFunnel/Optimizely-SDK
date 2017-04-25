@@ -43,7 +43,7 @@ class Optimizely
      * @param bool $oauth
      * @return static
      */
-    public static function create($token, $oauth = true)
+    public static function create($token, $oauth = false)
     {
         $headers = ['Content-Type' => 'application/json', 'Authorization' => "Bearer {$token}"];
 
