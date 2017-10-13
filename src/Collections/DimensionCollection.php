@@ -1,12 +1,12 @@
 <?php
 
-namespace GrowthOptimized\Collections;
+namespace WiderFunnel\Collections;
 
-use GrowthOptimized\Items\Dimension;
+use WiderFunnel\Items\Dimension;
 
 /**
  * Class DimensionCollection
- * @package GrowthOptimized\Collections
+ * @package WiderFunnel\Collections
  */
 class DimensionCollection extends CollectionAbstract
 {

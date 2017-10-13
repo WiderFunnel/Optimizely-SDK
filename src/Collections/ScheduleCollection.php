@@ -1,12 +1,12 @@
 <?php
 
-namespace GrowthOptimized\Collections;
+namespace WiderFunnel\Collections;
 
-use GrowthOptimized\Items\Schedule;
+use WiderFunnel\Items\Schedule;
 
 /**
  * Class ScheduleCollection
- * @package GrowthOptimized\Collections
+ * @package WiderFunnel\Collections
  */
 class ScheduleCollection extends CollectionAbstract
 {

@@ -1,13 +1,13 @@
 <?php
 
-namespace GrowthOptimized\Items;
+namespace WiderFunnel\Items;
 
 use Illuminate\Contracts\Support\Arrayable;
 use Illuminate\Contracts\Support\Jsonable;
 
 /**
  * Class ItemAbstract
- * @package GrowthOptimized\Items
+ * @package WiderFunnel\Items
  */
 abstract class ItemAbstract implements Arrayable, Jsonable
 {

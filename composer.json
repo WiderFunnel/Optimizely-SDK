@@ -1,5 +1,5 @@
 {
-    "name": "growthoptimized/optimizely-sdk",
+    "name": "widerfunnel/optimizely-sdk",
     "type": "library",
     "description": "Optimizely API PHP SDK",
     "license": "MIT",
@@ -7,7 +7,7 @@
         {
             "name": "Valentin Prugnaud",
             "email": "valentin.prugnaud@widerfunnel.com",
-            "homepage": "https://github.com/GrowthOptimized/Optimizely-SDK"
+            "homepage": "https://github.com/WiderFunnel/Optimizely-SDK"
         }
     ],
     "keywords": [
@@ -32,12 +32,12 @@
     },
     "autoload": {
         "psr-4": {
-            "GrowthOptimized\\":"src"
+            "WiderFunnel\\":"src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "GrowthOptimized\\Tests\\":"tests"
+            "WiderFunnel\\Tests\\":"tests"
         }
     }
 }

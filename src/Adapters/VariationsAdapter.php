@@ -1,12 +1,12 @@
 <?php
 
-namespace GrowthOptimized\Adapters;
+namespace WiderFunnel\Adapters;
 
-use GrowthOptimized\Items\Variation;
+use WiderFunnel\Items\Variation;
 
 /**
  * Class VariationsAdapter
- * @package GrowthOptimized
+ * @package WiderFunnel
  */
 class VariationsAdapter extends AdapterAbstract
 {

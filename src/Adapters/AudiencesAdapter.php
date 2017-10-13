@@ -1,12 +1,12 @@
 <?php
 
-namespace GrowthOptimized\Adapters;
+namespace WiderFunnel\Adapters;
 
-use GrowthOptimized\Items\Audience;
+use WiderFunnel\Items\Audience;
 
 /**
  * Class AudiencesAdapter
- * @package GrowthOptimized
+ * @package WiderFunnel
  */
 class AudiencesAdapter extends AdapterAbstract
 {

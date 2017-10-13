@@ -1,12 +1,12 @@
 <?php
 
-namespace GrowthOptimized\Adapters;
+namespace WiderFunnel\Adapters;
 
-use GrowthOptimized\Items\Dimension;
+use WiderFunnel\Items\Dimension;
 
 /**
  * Class DimensionsAdapter
- * @package GrowthOptimized
+ * @package WiderFunnel
  */
 class DimensionsAdapter extends AdapterAbstract
 {

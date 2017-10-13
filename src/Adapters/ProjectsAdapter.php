@@ -1,23 +1,23 @@
 <?php
 
-namespace GrowthOptimized\Adapters;
+namespace WiderFunnel\Adapters;
 
-use GrowthOptimized\Collections\AudienceCollection;
-use GrowthOptimized\Collections\DimensionCollection;
-use GrowthOptimized\Collections\ExperimentCollection;
-use GrowthOptimized\Collections\GoalCollection;
-use GrowthOptimized\Collections\ProjectCollection;
-use GrowthOptimized\Collections\UploadedListCollection;
-use GrowthOptimized\Items\Audience;
-use GrowthOptimized\Items\Dimension;
-use GrowthOptimized\Items\Experiment;
-use GrowthOptimized\Items\Goal;
-use GrowthOptimized\Items\Project;
-use GrowthOptimized\Items\UploadedList;
+use WiderFunnel\Collections\AudienceCollection;
+use WiderFunnel\Collections\DimensionCollection;
+use WiderFunnel\Collections\ExperimentCollection;
+use WiderFunnel\Collections\GoalCollection;
+use WiderFunnel\Collections\ProjectCollection;
+use WiderFunnel\Collections\UploadedListCollection;
+use WiderFunnel\Items\Audience;
+use WiderFunnel\Items\Dimension;
+use WiderFunnel\Items\Experiment;
+use WiderFunnel\Items\Goal;
+use WiderFunnel\Items\Project;
+use WiderFunnel\Items\UploadedList;
 
 /**
  * Class ProjectsAdapter
- * @package GrowthOptimized
+ * @package WiderFunnel
  */
 class ProjectsAdapter extends AdapterAbstract
 {

@@ -1,6 +1,6 @@
 <?php
 
-use GrowthOptimized\Items\UploadedList;
+use WiderFunnel\Items\UploadedList;
 
 /**
  * UPLOADED LISTS (TARGETING LISTS):

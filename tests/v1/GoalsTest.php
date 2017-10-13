@@ -1,9 +1,9 @@
 <?php
 
-namespace GrowthOptimized\Tests\v1;
+namespace WiderFunnel\Tests\v1;
 
-use GrowthOptimized\Tests\TestCase;
-use GrowthOptimized\Items\Goal;
+use WiderFunnel\Tests\TestCase;
+use WiderFunnel\Items\Goal;
 
 /**
  * Class GoalsTest
@@ -15,10 +15,10 @@ class GoalsTest extends TestCase
     {
         $client = $this->fakeClient('goals/goals');
 
-        $optimizely = new \GrowthOptimized\Optimizely($client);
+        $optimizely = new \WiderFunnel\Optimizely($client);
         $goals = $optimizely->projects()->goals('1');
 
-        $this->assertInstanceOf(\GrowthOptimized\Collections\GoalCollection::class, $goals);
+        $this->assertInstanceOf(\WiderFunnel\Collections\GoalCollection::class, $goals);
         $this->assertObjectHasAttribute('items', $goals);
         $this->assertInstanceOf(Goal::class, $goals->first());
         $this->assertObjectHasAttribute('id', $goals->first());
@@ -30,7 +30,7 @@ class GoalsTest extends TestCase
     {
         $client = $this->fakeClient('goals/goal');
 
-        $optimizely = new \GrowthOptimized\Optimizely($client);
+        $optimizely = new \WiderFunnel\Optimizely($client);
         $goal = $optimizely->goals()->find('1');
 
         $this->assertInstanceOf(Goal::class, $goal);
@@ -42,7 +42,7 @@ class GoalsTest extends TestCase
     {
         $client = $this->fakeClient('goals/goal');
 
-        $optimizely = new \GrowthOptimized\Optimizely($client);
+        $optimizely = new \WiderFunnel\Optimizely($client);
         $goal = $optimizely->projects('1')->createGoal("Canadians", Goal::TYPE_CLICK);
 
         $this->assertInstanceOf(Goal::class, $goal);
@@ -54,7 +54,7 @@ class GoalsTest extends TestCase
     {
         $client = $this->fakeClient('goals/goal');
 
-        $optimizely = new \GrowthOptimized\Optimizely($client);
+        $optimizely = new \WiderFunnel\Optimizely($client);
         $goal = $optimizely->goals('1')->update(['name' => 'Canadians']);
 
         $this->assertInstanceOf(Goal::class, $goal);
@@ -66,7 +66,7 @@ class GoalsTest extends TestCase
     {
         $client = $this->fakeClient('goals/goal');
 
-        $optimizely = new \GrowthOptimized\Optimizely($client);
+        $optimizely = new \WiderFunnel\Optimizely($client);
         $goal = $optimizely->goal('1')->delete();
 
         $this->assertTrue($goal);

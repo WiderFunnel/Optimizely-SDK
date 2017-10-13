@@ -1,12 +1,12 @@
 <?php
 
-namespace GrowthOptimized\Adapters;
+namespace WiderFunnel\Adapters;
 
-use GrowthOptimized\Items\Goal;
+use WiderFunnel\Items\Goal;
 
 /**
  * Class GoalsAdapter
- * @package GrowthOptimized
+ * @package WiderFunnel
  */
 class GoalsAdapter extends AdapterAbstract
 {

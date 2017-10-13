@@ -1,12 +1,12 @@
 <?php
 
-namespace GrowthOptimized\Adapters;
+namespace WiderFunnel\Adapters;
 
-use GrowthOptimized\Items\UploadedList;
+use WiderFunnel\Items\UploadedList;
 
 /**
  * Class UploadedListsAdapter
- * @package GrowthOptimized
+ * @package WiderFunnel
  */
 class UploadedListsAdapter extends AdapterAbstract
 {

@@ -1,13 +1,13 @@
 <?php
 
-namespace GrowthOptimized\Adapters;
+namespace WiderFunnel\Adapters;
 
 use GuzzleHttp\ClientInterface;
 use Psr\Http\Message\ResponseInterface;
 
 /**
  * Class AdapterAbstract
- * @package GrowthOptimized\Adapters
+ * @package WiderFunnel\Adapters
  */
 class AdapterAbstract
 {

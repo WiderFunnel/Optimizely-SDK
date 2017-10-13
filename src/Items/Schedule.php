@@ -1,10 +1,10 @@
 <?php
 
-namespace GrowthOptimized\Items;
+namespace WiderFunnel\Items;
 
 /**
  * Class Schedule
- * @package GrowthOptimized\Items;
+ * @package WiderFunnel\Items;
  */
 class Schedule extends ItemAbstract
 {

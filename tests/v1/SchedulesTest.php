@@ -1,8 +1,8 @@
 <?php
 
-namespace GrowthOptimized\Tests\v1;
+namespace WiderFunnel\Tests\v1;
 
-use GrowthOptimized\Tests\TestCase;
+use WiderFunnel\Tests\TestCase;
 
 /**
  * Class SchedulesTest
@@ -14,12 +14,12 @@ class SchedulesTest extends TestCase
     {
         $client = $this->fakeClient('schedules/schedules');
 
-        $optimizely = new \GrowthOptimized\Optimizely($client);
+        $optimizely = new \WiderFunnel\Optimizely($client);
         $schedules = $optimizely->experiment('1')->schedules();
 
-        $this->assertInstanceOf(\GrowthOptimized\Collections\ScheduleCollection::class, $schedules);
+        $this->assertInstanceOf(\WiderFunnel\Collections\ScheduleCollection::class, $schedules);
         $this->assertObjectHasAttribute('items', $schedules);
-        $this->assertInstanceOf(\GrowthOptimized\Items\Schedule::class, $schedules->first());
+        $this->assertInstanceOf(\WiderFunnel\Items\Schedule::class, $schedules->first());
         $this->assertObjectHasAttribute('id', $schedules->first());
         $this->assertJsonStringEqualsJsonFile($this->getStub('schedules/schedules'), $schedules->toJson());
     }
@@ -29,7 +29,7 @@ class SchedulesTest extends TestCase
     {
         $client = $this->fakeClient('schedules/schedules');
 
-        $optimizely = new \GrowthOptimized\Optimizely($client);
+        $optimizely = new \WiderFunnel\Optimizely($client);
         $schedules = $optimizely->experiment('1')->schedules();
 
         $this->assertJsonStringEqualsJsonFile(
@@ -43,7 +43,7 @@ class SchedulesTest extends TestCase
     {
         $client = $this->fakeClient('schedules/schedules');
 
-        $optimizely = new \GrowthOptimized\Optimizely($client);
+        $optimizely = new \WiderFunnel\Optimizely($client);
         $schedules = $optimizely->experiments()->schedules('1');
 
         $this->assertJsonStringEqualsJsonFile(
@@ -57,10 +57,10 @@ class SchedulesTest extends TestCase
     {
         $client = $this->fakeClient('schedules/schedule');
 
-        $optimizely = new \GrowthOptimized\Optimizely($client);
+        $optimizely = new \WiderFunnel\Optimizely($client);
         $schedule = $optimizely->schedules()->find('1');
 
-        $this->assertInstanceOf(\GrowthOptimized\Items\Schedule::class, $schedule);
+        $this->assertInstanceOf(\WiderFunnel\Items\Schedule::class, $schedule);
         $this->assertJsonStringEqualsJsonFile($this->getStub('schedules/schedule'), $schedule->toJson());
     }
 
@@ -69,10 +69,10 @@ class SchedulesTest extends TestCase
     {
         $client = $this->fakeClient('schedules/schedule');
 
-        $optimizely = new \GrowthOptimized\Optimizely($client);
+        $optimizely = new \WiderFunnel\Optimizely($client);
         $schedule = $optimizely->experiment('1')->schedule('2015-01-01T08:00:00Z', '2015-01-01T08:00:00Z');
 
-        $this->assertInstanceOf(\GrowthOptimized\Items\Schedule::class, $schedule);
+        $this->assertInstanceOf(\WiderFunnel\Items\Schedule::class, $schedule);
         $this->assertJsonStringEqualsJsonFile($this->getStub('schedules/schedule'), $schedule->toJson());
     }
 
@@ -81,10 +81,10 @@ class SchedulesTest extends TestCase
     {
         $client = $this->fakeClient('schedules/schedule');
 
-        $optimizely = new \GrowthOptimized\Optimizely($client);
+        $optimizely = new \WiderFunnel\Optimizely($client);
         $schedule = $optimizely->experiment('1')->schedule(\Carbon\Carbon::now()->addDays(10));
 
-        $this->assertInstanceOf(\GrowthOptimized\Items\Schedule::class, $schedule);
+        $this->assertInstanceOf(\WiderFunnel\Items\Schedule::class, $schedule);
         $this->assertJsonStringEqualsJsonFile($this->getStub('schedules/schedule'), $schedule->toJson());
     }
 
@@ -93,10 +93,10 @@ class SchedulesTest extends TestCase
     {
         $client = $this->fakeClient('schedules/schedule');
 
-        $optimizely = new \GrowthOptimized\Optimizely($client);
+        $optimizely = new \WiderFunnel\Optimizely($client);
         $schedule = $optimizely->experiment('1')->startAt('2015-01-01T08:00:00Z');
 
-        $this->assertInstanceOf(\GrowthOptimized\Items\Schedule::class, $schedule);
+        $this->assertInstanceOf(\WiderFunnel\Items\Schedule::class, $schedule);
         $this->assertJsonStringEqualsJsonFile($this->getStub('schedules/schedule'), $schedule->toJson());
     }
 
@@ -105,10 +105,10 @@ class SchedulesTest extends TestCase
     {
         $client = $this->fakeClient('schedules/schedule');
 
-        $optimizely = new \GrowthOptimized\Optimizely($client);
+        $optimizely = new \WiderFunnel\Optimizely($client);
         $schedule = $optimizely->experiment('1')->stopAt('2015-01-01T08:00:00Z');
 
-        $this->assertInstanceOf(\GrowthOptimized\Items\Schedule::class, $schedule);
+        $this->assertInstanceOf(\WiderFunnel\Items\Schedule::class, $schedule);
         $this->assertJsonStringEqualsJsonFile($this->getStub('schedules/schedule'), $schedule->toJson());
     }
 
@@ -117,10 +117,10 @@ class SchedulesTest extends TestCase
     {
         $client = $this->fakeClient('schedules/schedule');
 
-        $optimizely = new \GrowthOptimized\Optimizely($client);
+        $optimizely = new \WiderFunnel\Optimizely($client);
         $schedule = $optimizely->schedule('1')->update('2015-01-01T08:00:00Z');
 
-        $this->assertInstanceOf(\GrowthOptimized\Items\Schedule::class, $schedule);
+        $this->assertInstanceOf(\WiderFunnel\Items\Schedule::class, $schedule);
         $this->assertJsonStringEqualsJsonFile($this->getStub('schedules/schedule'), $schedule->toJson());
     }
 
@@ -129,10 +129,10 @@ class SchedulesTest extends TestCase
     {
         $client = $this->fakeClient('schedules/schedule');
 
-        $optimizely = new \GrowthOptimized\Optimizely($client);
+        $optimizely = new \WiderFunnel\Optimizely($client);
         $schedule = $optimizely->schedule('1')->startAt('2015-01-01T08:00:00Z');
 
-        $this->assertInstanceOf(\GrowthOptimized\Items\Schedule::class, $schedule);
+        $this->assertInstanceOf(\WiderFunnel\Items\Schedule::class, $schedule);
         $this->assertJsonStringEqualsJsonFile($this->getStub('schedules/schedule'), $schedule->toJson());
     }
 
@@ -141,10 +141,10 @@ class SchedulesTest extends TestCase
     {
         $client = $this->fakeClient('schedules/schedule');
 
-        $optimizely = new \GrowthOptimized\Optimizely($client);
+        $optimizely = new \WiderFunnel\Optimizely($client);
         $schedule = $optimizely->schedule('1')->stopAt('2015-01-01T08:00:00Z');
 
-        $this->assertInstanceOf(\GrowthOptimized\Items\Schedule::class, $schedule);
+        $this->assertInstanceOf(\WiderFunnel\Items\Schedule::class, $schedule);
         $this->assertJsonStringEqualsJsonFile($this->getStub('schedules/schedule'), $schedule->toJson());
     }
 
@@ -153,7 +153,7 @@ class SchedulesTest extends TestCase
     {
         $client = $this->fakeClient('schedules/schedule');
 
-        $optimizely = new \GrowthOptimized\Optimizely($client);
+        $optimizely = new \WiderFunnel\Optimizely($client);
         $schedule = $optimizely->schedule('1')->delete();
 
         $this->assertTrue($schedule);

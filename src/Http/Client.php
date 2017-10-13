@@ -1,12 +1,12 @@
 <?php
 
-namespace GrowthOptimized\Http;
+namespace WiderFunnel\Http;
 
 use GuzzleHttp\Client as BaseClient;
 
 /**
  * Class HttpClient
- * @package GrowthOptimized
+ * @package WiderFunnel
  */
 class Client extends BaseClient
 {

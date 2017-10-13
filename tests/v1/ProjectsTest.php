@@ -1,8 +1,8 @@
 <?php
 
-namespace GrowthOptimized\Tests\v1;
+namespace WiderFunnel\Tests\v1;
 
-use GrowthOptimized\Tests\TestCase;
+use WiderFunnel\Tests\TestCase;
 
 /**
  * Class ProjectsTest
@@ -14,12 +14,12 @@ class ProjectsTest extends TestCase
     {
         $client = $this->fakeClient('projects/projects');
 
-        $optimizely = new \GrowthOptimized\Optimizely($client);
+        $optimizely = new \WiderFunnel\Optimizely($client);
         $projects = $optimizely->projects()->all();
 
-        $this->assertInstanceOf(\GrowthOptimized\Collections\ProjectCollection::class, $projects);
+        $this->assertInstanceOf(\WiderFunnel\Collections\ProjectCollection::class, $projects);
         $this->assertObjectHasAttribute('items', $projects);
-        $this->assertInstanceOf(\GrowthOptimized\Items\Project::class, $projects->first());
+        $this->assertInstanceOf(\WiderFunnel\Items\Project::class, $projects->first());
         $this->assertObjectHasAttribute('id', $projects->first());
         $this->assertJsonStringEqualsJsonFile($this->getStub('projects/projects'), $projects->toJson());
     }
@@ -29,10 +29,10 @@ class ProjectsTest extends TestCase
     {
         $client = $this->fakeClient('projects/project');
 
-        $optimizely = new \GrowthOptimized\Optimizely($client);
+        $optimizely = new \WiderFunnel\Optimizely($client);
         $project = $optimizely->projects()->find('1');
 
-        $this->assertInstanceOf(\GrowthOptimized\Items\Project::class, $project);
+        $this->assertInstanceOf(\WiderFunnel\Items\Project::class, $project);
         $this->assertJsonStringEqualsJsonFile($this->getStub('projects/project'), $project->toJson());
     }
 
@@ -41,10 +41,10 @@ class ProjectsTest extends TestCase
     {
         $client = $this->fakeClient('projects/project');
 
-        $optimizely = new \GrowthOptimized\Optimizely($client);
+        $optimizely = new \WiderFunnel\Optimizely($client);
         $project = $optimizely->projects()->create('My even newer project name');
 
-        $this->assertInstanceOf(\GrowthOptimized\Items\Project::class, $project);
+        $this->assertInstanceOf(\WiderFunnel\Items\Project::class, $project);
         $this->assertJsonStringEqualsJsonFile($this->getStub('projects/project'), $project->toJson());
     }
 
@@ -53,10 +53,10 @@ class ProjectsTest extends TestCase
     {
         $client = $this->fakeClient('projects/project');
 
-        $optimizely = new \GrowthOptimized\Optimizely($client);
+        $optimizely = new \WiderFunnel\Optimizely($client);
         $project = $optimizely->project('1')->update(['project_name' => 'My even newer project name']);
 
-        $this->assertInstanceOf(\GrowthOptimized\Items\Project::class, $project);
+        $this->assertInstanceOf(\WiderFunnel\Items\Project::class, $project);
         $this->assertJsonStringEqualsJsonFile($this->getStub('projects/project'), $project->toJson());
     }
 
@@ -65,10 +65,10 @@ class ProjectsTest extends TestCase
     {
         $client = $this->fakeClient('projects/project');
 
-        $optimizely = new \GrowthOptimized\Optimizely($client);
+        $optimizely = new \WiderFunnel\Optimizely($client);
         $project = $optimizely->project('1')->activate();
 
-        $this->assertInstanceOf(\GrowthOptimized\Items\Project::class, $project);
+        $this->assertInstanceOf(\WiderFunnel\Items\Project::class, $project);
         $this->assertJsonStringEqualsJsonFile($this->getStub('projects/project'), $project->toJson());
     }
 
@@ -77,10 +77,10 @@ class ProjectsTest extends TestCase
     {
         $client = $this->fakeClient('projects/project');
 
-        $optimizely = new \GrowthOptimized\Optimizely($client);
+        $optimizely = new \WiderFunnel\Optimizely($client);
         $project = $optimizely->project('1')->archive();
 
-        $this->assertInstanceOf(\GrowthOptimized\Items\Project::class, $project);
+        $this->assertInstanceOf(\WiderFunnel\Items\Project::class, $project);
         $this->assertJsonStringEqualsJsonFile($this->getStub('projects/project'), $project->toJson());
     }
 }

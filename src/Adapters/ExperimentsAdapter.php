@@ -1,17 +1,17 @@
 <?php
 
-namespace GrowthOptimized\Adapters;
+namespace WiderFunnel\Adapters;
 
-use GrowthOptimized\Collections\ResultCollection;
-use GrowthOptimized\Collections\ScheduleCollection;
-use GrowthOptimized\Collections\VariationCollection;
-use GrowthOptimized\Items\Experiment;
-use GrowthOptimized\Items\Schedule;
-use GrowthOptimized\Items\Variation;
+use WiderFunnel\Collections\ResultCollection;
+use WiderFunnel\Collections\ScheduleCollection;
+use WiderFunnel\Collections\VariationCollection;
+use WiderFunnel\Items\Experiment;
+use WiderFunnel\Items\Schedule;
+use WiderFunnel\Items\Variation;
 
 /**
  * Class ExperimentsAdapter
- * @package GrowthOptimized
+ * @package WiderFunnel
  */
 class ExperimentsAdapter extends AdapterAbstract
 {

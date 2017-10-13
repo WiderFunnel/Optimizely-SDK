@@ -1,10 +1,10 @@
 <?php
 
-namespace GrowthOptimized\Items;
+namespace WiderFunnel\Items;
 
 /**
  * Class Audience
- * @package GrowthOptimized\Items;
+ * @package WiderFunnel\Items;
  */
 class Audience extends ItemAbstract
 {

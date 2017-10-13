@@ -1,9 +1,9 @@
 <?php
 
-namespace GrowthOptimized\Tests\v1;
+namespace WiderFunnel\Tests\v1;
 
-use GrowthOptimized\Tests\TestCase;
-use GrowthOptimized\Items\UploadedList;
+use WiderFunnel\Tests\TestCase;
+use WiderFunnel\Items\UploadedList;
 
 /**
  * Class UploadedLists
@@ -15,10 +15,10 @@ class UploadedLists extends TestCase
     {
         $client = $this->fakeClient('uploaded-lists/uploaded-lists');
 
-        $optimizely = new \GrowthOptimized\Optimizely($client);
+        $optimizely = new \WiderFunnel\Optimizely($client);
         $uploadedLists = $optimizely->projects()->uploadedLists('1');
 
-        $this->assertInstanceOf(\GrowthOptimized\Collections\UploadedListCollection::class, $uploadedLists);
+        $this->assertInstanceOf(\WiderFunnel\Collections\UploadedListCollection::class, $uploadedLists);
         $this->assertObjectHasAttribute('items', $uploadedLists);
         $this->assertInstanceOf(UploadedList::class, $uploadedLists->first());
         $this->assertObjectHasAttribute('id', $uploadedLists->first());
@@ -30,7 +30,7 @@ class UploadedLists extends TestCase
     {
         $client = $this->fakeClient('uploaded-lists/uploaded-list');
 
-        $optimizely = new \GrowthOptimized\Optimizely($client);
+        $optimizely = new \WiderFunnel\Optimizely($client);
         $uploadedList = $optimizely->uploadedLists()->find('1');
 
         $this->assertInstanceOf(UploadedList::class, $uploadedList);
@@ -42,7 +42,7 @@ class UploadedLists extends TestCase
     {
         $client = $this->fakeClient('uploaded-lists/uploaded-list');
 
-        $optimizely = new \GrowthOptimized\Optimizely($client);
+        $optimizely = new \WiderFunnel\Optimizely($client);
         $uploadedList = $optimizely->project('1')->createUploadedList(
             "Canadians", UploadedList::TYPE_ZIP_CODE, 'csv',
             'user_id', 'uid1,uid2'
@@ -57,7 +57,7 @@ class UploadedLists extends TestCase
     {
         $client = $this->fakeClient('uploaded-lists/uploaded-list');
 
-        $optimizely = new \GrowthOptimized\Optimizely($client);
+        $optimizely = new \WiderFunnel\Optimizely($client);
         $uploadedList = $optimizely->uploadedList('1')->update([
             'key_fields' => 'user_id'
         ]);
@@ -71,7 +71,7 @@ class UploadedLists extends TestCase
     {
         $client = $this->fakeClient('schedules/schedule');
 
-        $optimizely = new \GrowthOptimized\Optimizely($client);
+        $optimizely = new \WiderFunnel\Optimizely($client);
         $uploadedList = $optimizely->uploadedList('1')->delete();
 
         $this->assertTrue($uploadedList);

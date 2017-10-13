@@ -1,21 +1,21 @@
 <?php
 
-namespace GrowthOptimized;
+namespace WiderFunnel;
 
 use GuzzleHttp\ClientInterface;
-use GrowthOptimized\Adapters\AudiencesAdapter;
-use GrowthOptimized\Adapters\DimensionsAdapter;
-use GrowthOptimized\Adapters\ExperimentsAdapter;
-use GrowthOptimized\Adapters\GoalsAdapter;
-use GrowthOptimized\Adapters\ProjectsAdapter;
-use GrowthOptimized\Adapters\SchedulesAdapter;
-use GrowthOptimized\Adapters\UploadedListsAdapter;
-use GrowthOptimized\Adapters\VariationsAdapter;
-use GrowthOptimized\Http\Client;
+use WiderFunnel\Adapters\AudiencesAdapter;
+use WiderFunnel\Adapters\DimensionsAdapter;
+use WiderFunnel\Adapters\ExperimentsAdapter;
+use WiderFunnel\Adapters\GoalsAdapter;
+use WiderFunnel\Adapters\ProjectsAdapter;
+use WiderFunnel\Adapters\SchedulesAdapter;
+use WiderFunnel\Adapters\UploadedListsAdapter;
+use WiderFunnel\Adapters\VariationsAdapter;
+use WiderFunnel\Http\Client;
 
 /**
  * Class Optimizely
- * @package GrowthOptimized
+ * @package WiderFunnel
  */
 class Optimizely
 {

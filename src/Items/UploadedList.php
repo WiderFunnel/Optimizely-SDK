@@ -1,10 +1,10 @@
 <?php
 
-namespace GrowthOptimized\Items;
+namespace WiderFunnel\Items;
 
 /**
  * Class UploadedList
- * @package GrowthOptimized\Items;
+ * @package WiderFunnel\Items;
  */
 class UploadedList extends ItemAbstract
 {

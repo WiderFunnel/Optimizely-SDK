@@ -1,12 +1,12 @@
 <?php
 
-namespace GrowthOptimized\Collections;
+namespace WiderFunnel\Collections;
 
 use Illuminate\Support\Collection;
 
 /**
  * Class CollectionAbstract
- * @package GrowthOptimized\Collections
+ * @package WiderFunnel\Collections
  */
 abstract class CollectionAbstract extends Collection
 {

@@ -1,12 +1,12 @@
 <?php
 
-namespace GrowthOptimized\Collections;
+namespace WiderFunnel\Collections;
 
-use GrowthOptimized\Items\UploadedList;
+use WiderFunnel\Items\UploadedList;
 
 /**
  * Class UploadedListCollection
- * @package GrowthOptimized\Collections
+ * @package WiderFunnel\Collections
  */
 class UploadedListCollection extends CollectionAbstract
 {
