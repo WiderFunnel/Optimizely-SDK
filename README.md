@@ -251,3 +251,10 @@ $optimizely->uploadedList($uploadedListId)->update([
 // Delete an uploaded list
 $optimizely->uploadedList($uploadedListId)->delete();
 ```
+
+## Contributing
+For your contributions please be sure to read the [guidelines](https://github.com/WiderFunnel/Optimizely-SDK/blob/develop/CONTRIBUTING.md)
+
+## License
+
+This is licensed under [MIT](https://github.com/WiderFunnel/Optimizely-SDK/blob/develop/LICENSE)
